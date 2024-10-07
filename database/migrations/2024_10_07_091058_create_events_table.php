@@ -24,7 +24,7 @@ return new class extends Migration {
             $table->decimal('ticket_price');
             $table->integer('capacity');
             $table->string('imgUrl');
-            $table->string('status');
+            $table->enum('status', ['approved', 'pending', 'rejected'])->default('pending');
 
         });
     }
